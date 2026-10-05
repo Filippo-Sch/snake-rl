@@ -1,0 +1,63 @@
+{
+  "format": "snake-submission-weights-v1",
+  "policies": {
+    "native_b7_full": {
+      "file": "native_b7_full.pt",
+      "environment": "native",
+      "regime": "full",
+      "selected_transitions": 1280000,
+      "sha256": "daa7c653cdd276f1bb0f08eae97add498889f6d20c53c3fa0bc85d2fe12dd52a",
+      "seed": 0,
+      "board_size": 7
+    },
+    "native_b7_partial": {
+      "file": "native_b7_partial.pt",
+      "environment": "native",
+      "regime": "partial",
+      "selected_transitions": 2048000,
+      "sha256": "2050e84858af27b99b418ded826eb4ac60fcacd7601f703329fe5a0aedcc7d04",
+      "seed": 0,
+      "board_size": 7
+    },
+    "native_b11_full": {
+      "file": "native_b11_full.pt",
+      "environment": "native",
+      "regime": "full",
+      "selected_transitions": 3712000,
+      "sha256": "68430b6b3aa4f4f0dbde19007bbdf038adf32a155ba3007f1ff00bbdf34e231e",
+      "seed": 0,
+      "board_size": 11
+    },
+    "native_b11_partial": {
+      "file": "native_b11_partial.pt",
+      "environment": "native",
+      "regime": "partial",
+      "selected_transitions": 3072000,
+      "sha256": "741a84f2123b121fc853d603c669878013a2808cd1c84cb14f3b421232fee26a",
+      "seed": 0,
+      "board_size": 11
+    },
+    "classic_full": {
+      "file": "classic_full.pt",
+      "environment": "classic",
+      "regime": "full",
+      "selected_transitions": 4096000,
+      "sha256": "2f754f9a207c917dfd9b670fa61e7242ec9635b9ded4f6560087dabbb3f20ac6",
+      "seed": 0,
+      "source_sha256": "5206d6bc824d5223c09d803884c47b5a5f1ac512c1386a31f4e271e0368efc80",
+      "state_dict_sha256": "8cddcef760a7c8593cea41fe03eaf8c2424a8f3220bc9fac3db39f001ec34d62",
+      "export": "Relative metadata paths; learned tensors unchanged"
+    },
+    "classic_partial": {
+      "file": "classic_partial.pt",
+      "environment": "classic",
+      "regime": "partial",
+      "selected_transitions": 2432000,
+      "sha256": "28343ec8bba20e40bd38b04c4712910d96b90a519991b1c6ff57789296bda906",
+      "seed": 0,
+      "source_sha256": "3cc7818d191ef76ecac0b57a02d792c1c614dce43d1b35e3dff35c802d9193d5",
+      "state_dict_sha256": "32f7781a2ddbb398faac9d95362060dee4461816b4e8f78149cf62eb577959dc",
+      "export": "Relative metadata paths; learned tensors unchanged"
+    }
+  }
+}

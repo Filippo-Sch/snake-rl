@@ -1,0 +1,393 @@
+{
+  "config": {
+    "board_size": 11,
+    "mask_size": 2,
+    "n_boards": 500,
+    "steps": 1000,
+    "seed": 0,
+    "record_steps": false,
+    "reward_profile": "R0",
+    "split": "test",
+    "test_stream": 3
+  },
+  "runs": [
+    {
+      "policy": "greedy",
+      "regime": "full",
+      "parameters": {},
+      "weights": null,
+      "initial_boards_sha256": "29069cbac307d30bc80168a2aba38ccda4d6fc1fe82c390f4a0296416447c13d",
+      "runtime": {
+        "python": "3.11.9",
+        "numpy": "1.26.4",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "environment_device": "cpu",
+        "torch": "2.13.0+cpu"
+      }
+    },
+    {
+      "policy": "bfs",
+      "regime": "full",
+      "parameters": {},
+      "weights": null,
+      "initial_boards_sha256": "29069cbac307d30bc80168a2aba38ccda4d6fc1fe82c390f4a0296416447c13d",
+      "runtime": {
+        "python": "3.11.9",
+        "numpy": "1.26.4",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "environment_device": "cpu",
+        "torch": "2.13.0+cpu"
+      }
+    },
+    {
+      "policy": "direct",
+      "regime": "full",
+      "parameters": {},
+      "weights": null,
+      "initial_boards_sha256": "29069cbac307d30bc80168a2aba38ccda4d6fc1fe82c390f4a0296416447c13d",
+      "runtime": {
+        "python": "3.11.9",
+        "numpy": "1.26.4",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "environment_device": "cpu",
+        "torch": "2.13.0+cpu"
+      }
+    },
+    {
+      "policy": "dqn_1024000",
+      "regime": "full",
+      "parameters": {
+        "full": {
+          "format": "snake-dqn-v2",
+          "regime": "full",
+          "board_size": 11,
+          "mask_size": 2,
+          "horizon": 1000,
+          "observation_shape": [
+            11,
+            11,
+            4
+          ],
+          "hidden_sizes": [
+            128,
+            128
+          ],
+          "time_input": "remaining_actions / horizon",
+          "gamma": 1.0,
+          "seed": 0,
+          "transitions": 896000,
+          "inference": "argmax_first_index",
+          "action_mask": false,
+          "input_canvas_side": 11,
+          "training_reward_profile": "R0"
+        }
+      },
+      "weights": {
+        "file": "b11_full_dqn_1024000.pt",
+        "sha256": "8cb710fbe29ce8b880cdef02448894ecbaad05d4699e36b4b93b533455773951"
+      },
+      "initial_boards_sha256": "29069cbac307d30bc80168a2aba38ccda4d6fc1fe82c390f4a0296416447c13d",
+      "runtime": {
+        "python": "3.11.9",
+        "numpy": "1.26.4",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "environment_device": "cpu",
+        "torch": "2.13.0+cpu"
+      }
+    },
+    {
+      "policy": "dqn_2048000",
+      "regime": "full",
+      "parameters": {
+        "full": {
+          "format": "snake-dqn-v2",
+          "regime": "full",
+          "board_size": 11,
+          "mask_size": 2,
+          "horizon": 1000,
+          "observation_shape": [
+            11,
+            11,
+            4
+          ],
+          "hidden_sizes": [
+            128,
+            128
+          ],
+          "time_input": "remaining_actions / horizon",
+          "gamma": 1.0,
+          "seed": 0,
+          "transitions": 1920000,
+          "inference": "argmax_first_index",
+          "action_mask": false,
+          "input_canvas_side": 11,
+          "training_reward_profile": "R0"
+        }
+      },
+      "weights": {
+        "file": "b11_full_dqn_2048000.pt",
+        "sha256": "e8138ea50c52cee9b52817e39c3b4c56c50fcfb73be54cbba15685d06c99a37f"
+      },
+      "initial_boards_sha256": "29069cbac307d30bc80168a2aba38ccda4d6fc1fe82c390f4a0296416447c13d",
+      "runtime": {
+        "python": "3.11.9",
+        "numpy": "1.26.4",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "environment_device": "cpu",
+        "torch": "2.13.0+cpu"
+      }
+    },
+    {
+      "policy": "dqn_A_selected",
+      "regime": "full",
+      "parameters": {
+        "full": {
+          "format": "snake-dqn-v2",
+          "regime": "full",
+          "board_size": 11,
+          "mask_size": 2,
+          "horizon": 1000,
+          "observation_shape": [
+            11,
+            11,
+            4
+          ],
+          "hidden_sizes": [
+            128,
+            128
+          ],
+          "time_input": "remaining_actions / horizon",
+          "gamma": 1.0,
+          "seed": 0,
+          "transitions": 3968000,
+          "inference": "argmax_first_index",
+          "action_mask": false,
+          "input_canvas_side": 11,
+          "training_reward_profile": "R0"
+        }
+      },
+      "weights": {
+        "file": "b11_full_dqn_A_selected.pt",
+        "sha256": "7ee84fc8bfbba1276f2ce39f5bfe9fbef9c196eeecdd98fb91367baecdca7d4e"
+      },
+      "initial_boards_sha256": "29069cbac307d30bc80168a2aba38ccda4d6fc1fe82c390f4a0296416447c13d",
+      "runtime": {
+        "python": "3.11.9",
+        "numpy": "1.26.4",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "environment_device": "cpu",
+        "torch": "2.13.0+cpu"
+      }
+    },
+    {
+      "policy": "dqn_A_final",
+      "regime": "full",
+      "parameters": {
+        "full": {
+          "format": "snake-dqn-v2",
+          "regime": "full",
+          "board_size": 11,
+          "mask_size": 2,
+          "horizon": 1000,
+          "observation_shape": [
+            11,
+            11,
+            4
+          ],
+          "hidden_sizes": [
+            128,
+            128
+          ],
+          "time_input": "remaining_actions / horizon",
+          "gamma": 1.0,
+          "seed": 0,
+          "transitions": 4096000,
+          "inference": "argmax_first_index",
+          "action_mask": false,
+          "input_canvas_side": 11,
+          "training_reward_profile": "R0"
+        }
+      },
+      "weights": {
+        "file": "b11_full_dqn_A_final.pt",
+        "sha256": "0d15ab0a7523d48771bd257cf203ff096f72ab0c949da6ffd82868fe4c235561"
+      },
+      "initial_boards_sha256": "29069cbac307d30bc80168a2aba38ccda4d6fc1fe82c390f4a0296416447c13d",
+      "runtime": {
+        "python": "3.11.9",
+        "numpy": "1.26.4",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "environment_device": "cpu",
+        "torch": "2.13.0+cpu"
+      }
+    },
+    {
+      "policy": "dqn_B_selected",
+      "regime": "full",
+      "parameters": {
+        "full": {
+          "format": "snake-dqn-v2",
+          "regime": "full",
+          "board_size": 11,
+          "mask_size": 2,
+          "horizon": 1000,
+          "observation_shape": [
+            11,
+            11,
+            4
+          ],
+          "hidden_sizes": [
+            128,
+            128
+          ],
+          "time_input": "remaining_actions / horizon",
+          "gamma": 1.0,
+          "seed": 0,
+          "transitions": 3968000,
+          "inference": "argmax_first_index",
+          "action_mask": false,
+          "input_canvas_side": 11,
+          "training_reward_profile": "R0"
+        }
+      },
+      "weights": {
+        "file": "b11_full_dqn_B_selected.pt",
+        "sha256": "0415e12d0c5f4ba94ed38535a00f83b9fc67acdadf4dcae6784543dce3efc72a"
+      },
+      "initial_boards_sha256": "29069cbac307d30bc80168a2aba38ccda4d6fc1fe82c390f4a0296416447c13d",
+      "runtime": {
+        "python": "3.11.9",
+        "numpy": "1.26.4",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "environment_device": "cpu",
+        "torch": "2.13.0+cpu"
+      }
+    },
+    {
+      "policy": "dqn_B_final",
+      "regime": "full",
+      "parameters": {
+        "full": {
+          "format": "snake-dqn-v2",
+          "regime": "full",
+          "board_size": 11,
+          "mask_size": 2,
+          "horizon": 1000,
+          "observation_shape": [
+            11,
+            11,
+            4
+          ],
+          "hidden_sizes": [
+            128,
+            128
+          ],
+          "time_input": "remaining_actions / horizon",
+          "gamma": 1.0,
+          "seed": 0,
+          "transitions": 4096000,
+          "inference": "argmax_first_index",
+          "action_mask": false,
+          "input_canvas_side": 11,
+          "training_reward_profile": "R0"
+        }
+      },
+      "weights": {
+        "file": "b11_full_dqn_B_final.pt",
+        "sha256": "92531f162c3c207fac8193a231c8f12626e78ae07363180c2f33b3f0228071ee"
+      },
+      "initial_boards_sha256": "29069cbac307d30bc80168a2aba38ccda4d6fc1fe82c390f4a0296416447c13d",
+      "runtime": {
+        "python": "3.11.9",
+        "numpy": "1.26.4",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "environment_device": "cpu",
+        "torch": "2.13.0+cpu"
+      }
+    },
+    {
+      "policy": "dqn_C_selected",
+      "regime": "full",
+      "parameters": {
+        "full": {
+          "format": "snake-dqn-v2",
+          "regime": "full",
+          "board_size": 11,
+          "mask_size": 2,
+          "horizon": 1000,
+          "observation_shape": [
+            11,
+            11,
+            4
+          ],
+          "hidden_sizes": [
+            128,
+            128
+          ],
+          "time_input": "remaining_actions / horizon",
+          "gamma": 1.0,
+          "seed": 0,
+          "transitions": 3712000,
+          "inference": "argmax_first_index",
+          "action_mask": false,
+          "input_canvas_side": 11,
+          "training_reward_profile": "R0"
+        }
+      },
+      "weights": {
+        "file": "b11_full_dqn_C_selected.pt",
+        "sha256": "68430b6b3aa4f4f0dbde19007bbdf038adf32a155ba3007f1ff00bbdf34e231e"
+      },
+      "initial_boards_sha256": "29069cbac307d30bc80168a2aba38ccda4d6fc1fe82c390f4a0296416447c13d",
+      "runtime": {
+        "python": "3.11.9",
+        "numpy": "1.26.4",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "environment_device": "cpu",
+        "torch": "2.13.0+cpu"
+      }
+    },
+    {
+      "policy": "dqn_C_final",
+      "regime": "full",
+      "parameters": {
+        "full": {
+          "format": "snake-dqn-v2",
+          "regime": "full",
+          "board_size": 11,
+          "mask_size": 2,
+          "horizon": 1000,
+          "observation_shape": [
+            11,
+            11,
+            4
+          ],
+          "hidden_sizes": [
+            128,
+            128
+          ],
+          "time_input": "remaining_actions / horizon",
+          "gamma": 1.0,
+          "seed": 0,
+          "transitions": 4096000,
+          "inference": "argmax_first_index",
+          "action_mask": false,
+          "input_canvas_side": 11,
+          "training_reward_profile": "R0"
+        }
+      },
+      "weights": {
+        "file": "b11_full_dqn_C_final.pt",
+        "sha256": "329c4a8e7d194c52e49dfe82e9101c4d7ee4b9517e33569a3f1d9414578a9a21"
+      },
+      "initial_boards_sha256": "29069cbac307d30bc80168a2aba38ccda4d6fc1fe82c390f4a0296416447c13d",
+      "runtime": {
+        "python": "3.11.9",
+        "numpy": "1.26.4",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "environment_device": "cpu",
+        "torch": "2.13.0+cpu"
+      }
+    }
+  ]
+}

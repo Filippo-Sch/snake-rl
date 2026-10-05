@@ -1,0 +1,145 @@
+{
+  "config": {
+    "board_size": 11,
+    "mask_size": 2,
+    "n_boards": 100,
+    "steps": 1000,
+    "seed": 0,
+    "record_steps": false,
+    "reward_profile": "R0",
+    "split": "validation",
+    "test_stream": 1
+  },
+  "runs": [
+    {
+      "policy": "direct",
+      "regime": "full",
+      "parameters": {},
+      "weights": null,
+      "rewards": {
+        "STEP_REWARD": 0.0,
+        "FRUIT_REWARD": 0.5,
+        "HIT_WALL_REWARD": -0.1,
+        "ATE_HIMSELF_REWARD": -0.2,
+        "WIN_REWARD": 1.0
+      },
+      "initial_boards_sha256": "cfb02b6ccc8d495f2e7f250e522ce561112f1e2a3adb4837e5c4c508c6a11f09",
+      "summary": {
+        "fruits": {
+          "mean": 160.72,
+          "std": 6.0186242932948035
+        },
+        "wall_hits": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "body_hits": {
+          "mean": 22.59,
+          "std": 2.892327013938008
+        },
+        "board_completions": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "return": {
+          "mean": 75.84199993267656,
+          "std": 2.8814341255742577
+        },
+        "cells_removed_per_body_hit": 6.768924302788845,
+        "body_length_before_body_hit": 11.428508189464365,
+        "completion_rate": 0.0,
+        "total_completions": 0,
+        "returns_by_reward_profile": {
+          "R0": {
+            "mean": 75.84199999999998,
+            "std": 2.881434126656833
+          },
+          "R1": {
+            "mean": -32.59,
+            "std": 13.82016167368778
+          },
+          "R2": {
+            "mean": -32.59,
+            "std": 13.82016167368778
+          }
+        }
+      },
+      "diagnostics": {
+        "length_mismatch_states": 0
+      },
+      "policy_device": "cpu",
+      "runtime": {
+        "python": "3.11.9",
+        "numpy": "1.26.4",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "environment_device": "cpu",
+        "torch": "2.13.0+cpu"
+      }
+    },
+    {
+      "policy": "direct",
+      "regime": "partial",
+      "parameters": {},
+      "weights": null,
+      "rewards": {
+        "STEP_REWARD": 0.0,
+        "FRUIT_REWARD": 0.5,
+        "HIT_WALL_REWARD": -0.1,
+        "ATE_HIMSELF_REWARD": -0.2,
+        "WIN_REWARD": 1.0
+      },
+      "initial_boards_sha256": "cfb02b6ccc8d495f2e7f250e522ce561112f1e2a3adb4837e5c4c508c6a11f09",
+      "summary": {
+        "fruits": {
+          "mean": 36.17,
+          "std": 7.581283439224429
+        },
+        "wall_hits": {
+          "mean": 2.54,
+          "std": 1.9664868947111516
+        },
+        "body_hits": {
+          "mean": 5.4,
+          "std": 1.6143297699232972
+        },
+        "board_completions": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "return": {
+          "mean": 16.75099998012185,
+          "std": 3.6306911417082195
+        },
+        "cells_removed_per_body_hit": 5.637037037037037,
+        "body_length_before_body_hit": 8.040740740740741,
+        "completion_rate": 0.0,
+        "total_completions": 0,
+        "returns_by_reward_profile": {
+          "R0": {
+            "mean": 16.751000000000005,
+            "std": 3.630691143820717
+          },
+          "R1": {
+            "mean": -21.615,
+            "std": 12.61849992685503
+          },
+          "R2": {
+            "mean": -21.615,
+            "std": 12.61849992685503
+          }
+        }
+      },
+      "diagnostics": {
+        "length_mismatch_states": 709
+      },
+      "policy_device": "cpu",
+      "runtime": {
+        "python": "3.11.9",
+        "numpy": "1.26.4",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "environment_device": "cpu",
+        "torch": "2.13.0+cpu"
+      }
+    }
+  ]
+}

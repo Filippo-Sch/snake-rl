@@ -1,0 +1,7 @@
+# Preserve submitted bytes, including CRLF evidence covered by checksums.
+* -text
+
+*.pdf binary
+*.pt binary
+*.png binary
+*.zip binary

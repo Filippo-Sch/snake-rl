@@ -1,0 +1,2011 @@
+{
+  "regime": "full",
+  "stage": "scratch",
+  "counter": 4096000,
+  "budget": 4096000,
+  "complete": true,
+  "selected_counter": 4096000,
+  "selection": "completion first",
+  "history": [
+    {
+      "counter": 0,
+      "lineage_updates": 0,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 0,
+          "wall_death": 100,
+          "body_death": 0,
+          "total_limit": 0,
+          "fruit_free_limit": 0
+        },
+        "wins": 0,
+        "completion_rate": 0.0,
+        "completion_wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ],
+        "eventual_sample_bounds": [
+          0.0,
+          0.0
+        ],
+        "mean_fruits": 0.07,
+        "median_fruits": 0.0,
+        "std_fruits": 0.29171904291629636,
+        "zero_fruit_fraction": 0.94,
+        "mean_reward": -0.93282,
+        "actions": 282,
+        "mean_actions": 2.82,
+        "mean_completion_actions": null,
+        "median_completion_actions": null,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 365,
+          "4": 15,
+          "5": 2,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0,
+          "11": 0,
+          "12": 0,
+          "13": 0,
+          "14": 0,
+          "15": 0,
+          "16": 0,
+          "17": 0,
+          "18": 0,
+          "19": 0,
+          "20": 0,
+          "21": 0,
+          "22": 0,
+          "23": 0,
+          "24": 0,
+          "25": 0
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 128000,
+      "lineage_updates": 7744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 0,
+          "wall_death": 0,
+          "body_death": 37,
+          "total_limit": 63,
+          "fruit_free_limit": 0
+        },
+        "wins": 0,
+        "completion_rate": 0.0,
+        "completion_wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ],
+        "eventual_sample_bounds": [
+          0.0,
+          0.63
+        ],
+        "mean_fruits": 4.34,
+        "median_fruits": 4.0,
+        "std_fruits": 1.8287700784953806,
+        "zero_fruit_fraction": 0.04,
+        "mean_reward": 0.8105899999999673,
+        "actions": 315941,
+        "mean_actions": 3159.41,
+        "mean_completion_actions": null,
+        "median_completion_actions": null,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 20412,
+          "4": 5472,
+          "5": 20491,
+          "6": 40260,
+          "7": 75118,
+          "8": 44986,
+          "9": 64632,
+          "10": 29776,
+          "11": 14894,
+          "12": 0,
+          "13": 0,
+          "14": 0,
+          "15": 0,
+          "16": 0,
+          "17": 0,
+          "18": 0,
+          "19": 0,
+          "20": 0,
+          "21": 0,
+          "22": 0,
+          "23": 0,
+          "24": 0,
+          "25": 0
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 256000,
+      "lineage_updates": 15744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 0,
+          "wall_death": 0,
+          "body_death": 100,
+          "total_limit": 0,
+          "fruit_free_limit": 0
+        },
+        "wins": 0,
+        "completion_rate": 0.0,
+        "completion_wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ],
+        "eventual_sample_bounds": [
+          0.0,
+          0.0
+        ],
+        "mean_fruits": 6.85,
+        "median_fruits": 7.0,
+        "std_fruits": 2.8648734701553575,
+        "zero_fruit_fraction": 0.0,
+        "mean_reward": 5.817379999999998,
+        "actions": 3262,
+        "mean_actions": 32.62,
+        "mean_completion_actions": null,
+        "median_completion_actions": null,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 360,
+          "4": 395,
+          "5": 380,
+          "6": 405,
+          "7": 331,
+          "8": 309,
+          "9": 334,
+          "10": 322,
+          "11": 230,
+          "12": 156,
+          "13": 56,
+          "14": 36,
+          "15": 32,
+          "16": 14,
+          "17": 2,
+          "18": 0,
+          "19": 0,
+          "20": 0,
+          "21": 0,
+          "22": 0,
+          "23": 0,
+          "24": 0,
+          "25": 0
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 384000,
+      "lineage_updates": 23744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 0,
+          "wall_death": 0,
+          "body_death": 92,
+          "total_limit": 8,
+          "fruit_free_limit": 0
+        },
+        "wins": 0,
+        "completion_rate": 0.0,
+        "completion_wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ],
+        "eventual_sample_bounds": [
+          0.0,
+          0.08
+        ],
+        "mean_fruits": 7.89,
+        "median_fruits": 8.0,
+        "std_fruits": 2.799624974885029,
+        "zero_fruit_fraction": 0.0,
+        "mean_reward": 6.5320099999999695,
+        "actions": 43799,
+        "mean_actions": 437.99,
+        "mean_completion_actions": null,
+        "median_completion_actions": null,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 366,
+          "4": 384,
+          "5": 397,
+          "6": 432,
+          "7": 486,
+          "8": 10428,
+          "9": 20378,
+          "10": 5362,
+          "11": 304,
+          "12": 5108,
+          "13": 102,
+          "14": 72,
+          "15": 40,
+          "16": 29,
+          "17": 3,
+          "18": 8,
+          "19": 0,
+          "20": 0,
+          "21": 0,
+          "22": 0,
+          "23": 0,
+          "24": 0,
+          "25": 0
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 512000,
+      "lineage_updates": 31744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 0,
+          "wall_death": 0,
+          "body_death": 81,
+          "total_limit": 19,
+          "fruit_free_limit": 0
+        },
+        "wins": 0,
+        "completion_rate": 0.0,
+        "completion_wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ],
+        "eventual_sample_bounds": [
+          0.0,
+          0.19
+        ],
+        "mean_fruits": 10.33,
+        "median_fruits": 11.0,
+        "std_fruits": 3.168769477257694,
+        "zero_fruit_fraction": 0.0,
+        "mean_reward": 8.514829999999915,
+        "actions": 100517,
+        "mean_actions": 1005.17,
+        "mean_completion_actions": null,
+        "median_completion_actions": null,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 394,
+          "4": 426,
+          "5": 473,
+          "6": 5516,
+          "7": 5535,
+          "8": 20550,
+          "9": 15463,
+          "10": 25534,
+          "11": 5520,
+          "12": 20172,
+          "13": 398,
+          "14": 250,
+          "15": 186,
+          "16": 119,
+          "17": 48,
+          "18": 19,
+          "19": 12,
+          "20": 2,
+          "21": 0,
+          "22": 0,
+          "23": 0,
+          "24": 0,
+          "25": 0
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 640000,
+      "lineage_updates": 39744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 0,
+          "wall_death": 0,
+          "body_death": 68,
+          "total_limit": 32,
+          "fruit_free_limit": 0
+        },
+        "wins": 0,
+        "completion_rate": 0.0,
+        "completion_wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ],
+        "eventual_sample_bounds": [
+          0.0,
+          0.32
+        ],
+        "mean_fruits": 10.56,
+        "median_fruits": 12.0,
+        "std_fruits": 4.691097952505362,
+        "zero_fruit_fraction": 0.03,
+        "mean_reward": 8.219340000000038,
+        "actions": 166066,
+        "mean_actions": 1660.66,
+        "mean_completion_actions": null,
+        "median_completion_actions": null,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 15467,
+          "4": 505,
+          "5": 25532,
+          "6": 30404,
+          "7": 582,
+          "8": 5591,
+          "9": 20375,
+          "10": 20377,
+          "11": 5538,
+          "12": 5554,
+          "13": 15338,
+          "14": 15208,
+          "15": 300,
+          "16": 171,
+          "17": 154,
+          "18": 73,
+          "19": 4975,
+          "20": 13,
+          "21": 9,
+          "22": 0,
+          "23": 0,
+          "24": 0,
+          "25": 0
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 768000,
+      "lineage_updates": 47744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 0,
+          "wall_death": 0,
+          "body_death": 22,
+          "total_limit": 78,
+          "fruit_free_limit": 0
+        },
+        "wins": 0,
+        "completion_rate": 0.0,
+        "completion_wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ],
+        "eventual_sample_bounds": [
+          0.0,
+          0.78
+        ],
+        "mean_fruits": 8.77,
+        "median_fruits": 9.0,
+        "std_fruits": 3.9264615113356194,
+        "zero_fruit_fraction": 0.06,
+        "mean_reward": 4.629259999999944,
+        "actions": 392074,
+        "mean_actions": 3920.74,
+        "mean_completion_actions": null,
+        "median_completion_actions": null,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 30553,
+          "4": 25432,
+          "5": 644,
+          "6": 10538,
+          "7": 20441,
+          "8": 10594,
+          "9": 5604,
+          "10": 10625,
+          "11": 50065,
+          "12": 89223,
+          "13": 78911,
+          "14": 34635,
+          "15": 9939,
+          "16": 14849,
+          "17": 78,
+          "18": 39,
+          "19": 4,
+          "20": 0,
+          "21": 0,
+          "22": 0,
+          "23": 0,
+          "24": 0,
+          "25": 0
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 896000,
+      "lineage_updates": 55744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 0,
+          "wall_death": 0,
+          "body_death": 11,
+          "total_limit": 89,
+          "fruit_free_limit": 0
+        },
+        "wins": 0,
+        "completion_rate": 0.0,
+        "completion_wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ],
+        "eventual_sample_bounds": [
+          0.0,
+          0.89
+        ],
+        "mean_fruits": 4.48,
+        "median_fruits": 2.0,
+        "std_fruits": 4.657209464904923,
+        "zero_fruit_fraction": 0.34,
+        "mean_reward": -0.08711000000000911,
+        "actions": 445711,
+        "mean_actions": 4457.11,
+        "mean_completion_actions": null,
+        "median_completion_actions": null,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 170446,
+          "4": 55226,
+          "5": 10328,
+          "6": 10322,
+          "7": 5297,
+          "8": 20317,
+          "9": 15178,
+          "10": 44853,
+          "11": 39710,
+          "12": 14919,
+          "13": 10022,
+          "14": 34336,
+          "15": 4952,
+          "16": 9852,
+          "17": 13,
+          "18": 4,
+          "19": 24,
+          "20": 2,
+          "21": 10,
+          "22": 0,
+          "23": 0,
+          "24": 0,
+          "25": 0
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 1024000,
+      "lineage_updates": 63744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 0,
+          "wall_death": 0,
+          "body_death": 2,
+          "total_limit": 98,
+          "fruit_free_limit": 0
+        },
+        "wins": 0,
+        "completion_rate": 0.0,
+        "completion_wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ],
+        "eventual_sample_bounds": [
+          0.0,
+          0.98
+        ],
+        "mean_fruits": 1.82,
+        "median_fruits": 0.0,
+        "std_fruits": 3.4565300519451587,
+        "zero_fruit_fraction": 0.65,
+        "mean_reward": -3.1018999999999926,
+        "actions": 490190,
+        "mean_actions": 4901.9,
+        "mean_completion_actions": null,
+        "median_completion_actions": null,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 325236,
+          "4": 60158,
+          "5": 10144,
+          "6": 5263,
+          "7": 10103,
+          "8": 14989,
+          "9": 9951,
+          "10": 5073,
+          "11": 14835,
+          "12": 19657,
+          "13": 4986,
+          "14": 32,
+          "15": 9855,
+          "16": 6,
+          "17": 2,
+          "18": 0,
+          "19": 0,
+          "20": 0,
+          "21": 0,
+          "22": 0,
+          "23": 0,
+          "24": 0,
+          "25": 0
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 1152000,
+      "lineage_updates": 71744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 0,
+          "wall_death": 0,
+          "body_death": 11,
+          "total_limit": 89,
+          "fruit_free_limit": 0
+        },
+        "wins": 0,
+        "completion_rate": 0.0,
+        "completion_wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ],
+        "eventual_sample_bounds": [
+          0.0,
+          0.89
+        ],
+        "mean_fruits": 2.74,
+        "median_fruits": 2.0,
+        "std_fruits": 3.8668333297415343,
+        "zero_fruit_fraction": 0.33,
+        "mean_reward": -1.8284499999999013,
+        "actions": 445845,
+        "mean_actions": 4458.45,
+        "mean_completion_actions": null,
+        "median_completion_actions": null,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 165427,
+          "4": 65366,
+          "5": 99989,
+          "6": 35015,
+          "7": 20069,
+          "8": 19953,
+          "9": 5059,
+          "10": 9985,
+          "11": 5022,
+          "12": 14847,
+          "13": 68,
+          "14": 5005,
+          "15": 26,
+          "16": 37,
+          "17": 31,
+          "18": 25,
+          "19": 16,
+          "20": 5,
+          "21": 0,
+          "22": 0,
+          "23": 0,
+          "24": 0,
+          "25": 0
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 1280000,
+      "lineage_updates": 79744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 0,
+          "wall_death": 0,
+          "body_death": 16,
+          "total_limit": 84,
+          "fruit_free_limit": 0
+        },
+        "wins": 0,
+        "completion_rate": 0.0,
+        "completion_wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ],
+        "eventual_sample_bounds": [
+          0.0,
+          0.84
+        ],
+        "mean_fruits": 2.7,
+        "median_fruits": 1.0,
+        "std_fruits": 4.964876634922565,
+        "zero_fruit_fraction": 0.48,
+        "mean_reward": -1.6745899999998892,
+        "actions": 421459,
+        "mean_actions": 4214.59,
+        "mean_completion_actions": null,
+        "median_completion_actions": null,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 240493,
+          "4": 110067,
+          "5": 25087,
+          "6": 5151,
+          "7": 10121,
+          "8": 5107,
+          "9": 5051,
+          "10": 112,
+          "11": 5008,
+          "12": 5034,
+          "13": 154,
+          "14": 4967,
+          "15": 32,
+          "16": 93,
+          "17": 53,
+          "18": 4924,
+          "19": 40,
+          "20": 43,
+          "21": 18,
+          "22": 2,
+          "23": 2,
+          "24": 0,
+          "25": 0
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 1408000,
+      "lineage_updates": 87744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 0,
+          "wall_death": 0,
+          "body_death": 9,
+          "total_limit": 91,
+          "fruit_free_limit": 0
+        },
+        "wins": 0,
+        "completion_rate": 0.0,
+        "completion_wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ],
+        "eventual_sample_bounds": [
+          0.0,
+          0.91
+        ],
+        "mean_fruits": 2.05,
+        "median_fruits": 0.0,
+        "std_fruits": 4.739989451465055,
+        "zero_fruit_fraction": 0.59,
+        "mean_reward": -2.601539999999904,
+        "actions": 456154,
+        "mean_actions": 4561.54,
+        "mean_completion_actions": null,
+        "median_completion_actions": null,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 295314,
+          "4": 80082,
+          "5": 49976,
+          "6": 10099,
+          "7": 10029,
+          "8": 9978,
+          "9": 120,
+          "10": 53,
+          "11": 64,
+          "12": 73,
+          "13": 43,
+          "14": 77,
+          "15": 51,
+          "16": 39,
+          "17": 38,
+          "18": 67,
+          "19": 41,
+          "20": 70,
+          "21": 17,
+          "22": 23,
+          "23": 0,
+          "24": 0,
+          "25": 0
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 1536000,
+      "lineage_updates": 95744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 0,
+          "wall_death": 0,
+          "body_death": 1,
+          "total_limit": 99,
+          "fruit_free_limit": 0
+        },
+        "wins": 0,
+        "completion_rate": 0.0,
+        "completion_wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ],
+        "eventual_sample_bounds": [
+          0.0,
+          0.99
+        ],
+        "mean_fruits": 0.49,
+        "median_fruits": 0.0,
+        "std_fruits": 1.8947031429751733,
+        "zero_fruit_fraction": 0.79,
+        "mean_reward": -4.472199999999939,
+        "actions": 495220,
+        "mean_actions": 4952.2,
+        "mean_completion_actions": null,
+        "median_completion_actions": null,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 395232,
+          "4": 59984,
+          "5": 24959,
+          "6": 14959,
+          "7": 8,
+          "8": 3,
+          "9": 46,
+          "10": 15,
+          "11": 12,
+          "12": 6,
+          "13": 11,
+          "14": 19,
+          "15": 20,
+          "16": 4,
+          "17": 7,
+          "18": 21,
+          "19": 1,
+          "20": 11,
+          "21": 2,
+          "22": 0,
+          "23": 0,
+          "24": 0,
+          "25": 0
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 1664000,
+      "lineage_updates": 103744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 0,
+          "wall_death": 0,
+          "body_death": 5,
+          "total_limit": 95,
+          "fruit_free_limit": 0
+        },
+        "wins": 0,
+        "completion_rate": 0.0,
+        "completion_wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ],
+        "eventual_sample_bounds": [
+          0.0,
+          0.95
+        ],
+        "mean_fruits": 0.84,
+        "median_fruits": 0.0,
+        "std_fruits": 2.965535364820322,
+        "zero_fruit_fraction": 0.74,
+        "mean_reward": -3.9634699999999383,
+        "actions": 475347,
+        "mean_actions": 4753.47,
+        "mean_completion_actions": null,
+        "median_completion_actions": null,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 370302,
+          "4": 84912,
+          "5": 93,
+          "6": 10006,
+          "7": 4975,
+          "8": 4965,
+          "9": 24,
+          "10": 17,
+          "11": 13,
+          "12": 7,
+          "13": 11,
+          "14": 9,
+          "15": 6,
+          "16": 8,
+          "17": 9,
+          "18": 22,
+          "19": 4,
+          "20": 23,
+          "21": 14,
+          "22": 21,
+          "23": 4,
+          "24": 2,
+          "25": 0
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 1792000,
+      "lineage_updates": 111744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 1,
+          "wall_death": 0,
+          "body_death": 4,
+          "total_limit": 95,
+          "fruit_free_limit": 0
+        },
+        "wins": 1,
+        "completion_rate": 0.01,
+        "completion_wilson95": [
+          0.0017674320641406505,
+          0.054486196178705315
+        ],
+        "eventual_sample_bounds": [
+          0.01,
+          0.96
+        ],
+        "mean_fruits": 1.18,
+        "median_fruits": 0.0,
+        "std_fruits": 4.2623467714394145,
+        "zero_fruit_fraction": 0.76,
+        "mean_reward": -2.617689999999941,
+        "actions": 475769,
+        "mean_actions": 4757.69,
+        "mean_completion_actions": 170.0,
+        "median_completion_actions": 170.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 380272,
+          "4": 89954,
+          "5": 5013,
+          "6": 38,
+          "7": 26,
+          "8": 42,
+          "9": 59,
+          "10": 19,
+          "11": 46,
+          "12": 34,
+          "13": 25,
+          "14": 37,
+          "15": 39,
+          "16": 49,
+          "17": 39,
+          "18": 25,
+          "19": 44,
+          "20": 42,
+          "21": 14,
+          "22": 33,
+          "23": 6,
+          "24": 12,
+          "25": 1
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 1920000,
+      "lineage_updates": 119744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 8,
+          "wall_death": 0,
+          "body_death": 5,
+          "total_limit": 87,
+          "fruit_free_limit": 0
+        },
+        "wins": 8,
+        "completion_rate": 0.08,
+        "completion_wilson95": [
+          0.041093461484380624,
+          0.14998107700948735
+        ],
+        "eventual_sample_bounds": [
+          0.08,
+          0.95
+        ],
+        "mean_fruits": 2.83,
+        "median_fruits": 0.0,
+        "std_fruits": 6.931168732616456,
+        "zero_fruit_fraction": 0.7,
+        "mean_reward": 6.4118900000000485,
+        "actions": 436811,
+        "mean_actions": 4368.11,
+        "mean_completion_actions": 159.625,
+        "median_completion_actions": 164.5,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 350259,
+          "4": 70075,
+          "5": 10056,
+          "6": 103,
+          "7": 109,
+          "8": 5015,
+          "9": 73,
+          "10": 66,
+          "11": 91,
+          "12": 79,
+          "13": 100,
+          "14": 105,
+          "15": 73,
+          "16": 62,
+          "17": 121,
+          "18": 83,
+          "19": 95,
+          "20": 53,
+          "21": 69,
+          "22": 96,
+          "23": 87,
+          "24": 33,
+          "25": 8
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 2048000,
+      "lineage_updates": 127744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 7,
+          "wall_death": 0,
+          "body_death": 24,
+          "total_limit": 69,
+          "fruit_free_limit": 0
+        },
+        "wins": 7,
+        "completion_rate": 0.07,
+        "completion_wilson95": [
+          0.03431926106727268,
+          0.137495147390735
+        ],
+        "eventual_sample_bounds": [
+          0.07,
+          0.76
+        ],
+        "mean_fruits": 6.41,
+        "median_fruits": 0.0,
+        "std_fruits": 9.36706464160465,
+        "zero_fruit_fraction": 0.56,
+        "mean_reward": 9.675450000000048,
+        "actions": 349455,
+        "mean_actions": 3494.55,
+        "mean_completion_actions": 156.14285714285714,
+        "median_completion_actions": 153.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 280301,
+          "4": 55146,
+          "5": 216,
+          "6": 216,
+          "7": 175,
+          "8": 263,
+          "9": 182,
+          "10": 210,
+          "11": 5164,
+          "12": 201,
+          "13": 209,
+          "14": 237,
+          "15": 225,
+          "16": 256,
+          "17": 301,
+          "18": 5109,
+          "19": 312,
+          "20": 257,
+          "21": 120,
+          "22": 166,
+          "23": 171,
+          "24": 111,
+          "25": 7
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 2176000,
+      "lineage_updates": 135744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 22,
+          "wall_death": 0,
+          "body_death": 25,
+          "total_limit": 53,
+          "fruit_free_limit": 0
+        },
+        "wins": 22,
+        "completion_rate": 0.22,
+        "completion_wilson95": [
+          0.150012823846054,
+          0.31070353514985793
+        ],
+        "eventual_sample_bounds": [
+          0.22,
+          0.75
+        ],
+        "mean_fruits": 9.73,
+        "median_fruits": 1.0,
+        "std_fruits": 10.156628377567037,
+        "zero_fruit_fraction": 0.43,
+        "mean_reward": 28.764800000000065,
+        "actions": 271520,
+        "mean_actions": 2715.2,
+        "mean_completion_actions": 155.0,
+        "median_completion_actions": 156.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 215358,
+          "4": 40343,
+          "5": 365,
+          "6": 393,
+          "7": 330,
+          "8": 321,
+          "9": 294,
+          "10": 343,
+          "11": 298,
+          "12": 328,
+          "13": 332,
+          "14": 292,
+          "15": 5229,
+          "16": 319,
+          "17": 259,
+          "18": 5292,
+          "19": 288,
+          "20": 281,
+          "21": 318,
+          "22": 237,
+          "23": 221,
+          "24": 157,
+          "25": 22
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 2304000,
+      "lineage_updates": 143744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 24,
+          "wall_death": 0,
+          "body_death": 25,
+          "total_limit": 51,
+          "fruit_free_limit": 0
+        },
+        "wins": 24,
+        "completion_rate": 0.24,
+        "completion_wilson95": [
+          0.16691325556948772,
+          0.33232336349814473
+        ],
+        "eventual_sample_bounds": [
+          0.24,
+          0.75
+        ],
+        "mean_fruits": 11.1,
+        "median_fruits": 11.0,
+        "std_fruits": 9.781104232140661,
+        "zero_fruit_fraction": 0.27,
+        "mean_reward": 32.23725000000011,
+        "actions": 261275,
+        "mean_actions": 2612.75,
+        "mean_completion_actions": 145.66666666666666,
+        "median_completion_actions": 143.5,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 135421,
+          "4": 70297,
+          "5": 384,
+          "6": 405,
+          "7": 467,
+          "8": 408,
+          "9": 423,
+          "10": 393,
+          "11": 315,
+          "12": 5282,
+          "13": 15191,
+          "14": 24944,
+          "15": 5272,
+          "16": 381,
+          "17": 213,
+          "18": 275,
+          "19": 229,
+          "20": 230,
+          "21": 268,
+          "22": 212,
+          "23": 219,
+          "24": 122,
+          "25": 24
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 2432000,
+      "lineage_updates": 151744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 52,
+          "wall_death": 0,
+          "body_death": 26,
+          "total_limit": 22,
+          "fruit_free_limit": 0
+        },
+        "wins": 52,
+        "completion_rate": 0.52,
+        "completion_wilson95": [
+          0.4231657776522397,
+          0.615354482419481
+        ],
+        "eventual_sample_bounds": [
+          0.52,
+          0.74
+        ],
+        "mean_fruits": 16.76,
+        "median_fruits": 22.0,
+        "std_fruits": 8.662701657104439,
+        "zero_fruit_fraction": 0.14,
+        "mean_reward": 67.29606000000001,
+        "actions": 120394,
+        "mean_actions": 1203.94,
+        "mean_completion_actions": 136.53846153846155,
+        "median_completion_actions": 137.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 70516,
+          "4": 553,
+          "5": 5523,
+          "6": 516,
+          "7": 35401,
+          "8": 449,
+          "9": 579,
+          "10": 515,
+          "11": 447,
+          "12": 438,
+          "13": 622,
+          "14": 598,
+          "15": 523,
+          "16": 444,
+          "17": 550,
+          "18": 389,
+          "19": 352,
+          "20": 452,
+          "21": 466,
+          "22": 376,
+          "23": 449,
+          "24": 284,
+          "25": 52
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 2560000,
+      "lineage_updates": 159744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 35,
+          "wall_death": 0,
+          "body_death": 26,
+          "total_limit": 39,
+          "fruit_free_limit": 0
+        },
+        "wins": 35,
+        "completion_rate": 0.35,
+        "completion_wilson95": [
+          0.26364248243097527,
+          0.44745556703112027
+        ],
+        "eventual_sample_bounds": [
+          0.35,
+          0.74
+        ],
+        "mean_fruits": 12.03,
+        "median_fruits": 19.5,
+        "std_fruits": 10.28052041484282,
+        "zero_fruit_fraction": 0.31,
+        "mean_reward": 44.74774000000002,
+        "actions": 202226,
+        "mean_actions": 2022.26,
+        "mean_completion_actions": 133.8,
+        "median_completion_actions": 131.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 155432,
+          "4": 15489,
+          "5": 5382,
+          "6": 5431,
+          "7": 15339,
+          "8": 436,
+          "9": 335,
+          "10": 414,
+          "11": 372,
+          "12": 317,
+          "13": 344,
+          "14": 295,
+          "15": 290,
+          "16": 242,
+          "17": 273,
+          "18": 310,
+          "19": 258,
+          "20": 263,
+          "21": 306,
+          "22": 320,
+          "23": 290,
+          "24": 153,
+          "25": 35
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 2688000,
+      "lineage_updates": 167744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 20,
+          "wall_death": 0,
+          "body_death": 32,
+          "total_limit": 48,
+          "fruit_free_limit": 0
+        },
+        "wins": 20,
+        "completion_rate": 0.2,
+        "completion_wilson95": [
+          0.1333669333310325,
+          0.2888291655931589
+        ],
+        "eventual_sample_bounds": [
+          0.2,
+          0.68
+        ],
+        "mean_fruits": 10.85,
+        "median_fruits": 14.0,
+        "std_fruits": 9.980355705083863,
+        "zero_fruit_fraction": 0.27,
+        "mean_reward": 28.064240000000044,
+        "actions": 246576,
+        "mean_actions": 2465.76,
+        "mean_completion_actions": 138.05,
+        "median_completion_actions": 137.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 135482,
+          "4": 75300,
+          "5": 5320,
+          "6": 20263,
+          "7": 428,
+          "8": 377,
+          "9": 372,
+          "10": 380,
+          "11": 333,
+          "12": 391,
+          "13": 355,
+          "14": 318,
+          "15": 325,
+          "16": 299,
+          "17": 317,
+          "18": 261,
+          "19": 266,
+          "20": 192,
+          "21": 280,
+          "22": 5099,
+          "23": 139,
+          "24": 159,
+          "25": 20
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 2816000,
+      "lineage_updates": 175744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 9,
+          "wall_death": 0,
+          "body_death": 16,
+          "total_limit": 75,
+          "fruit_free_limit": 0
+        },
+        "wins": 9,
+        "completion_rate": 0.09,
+        "completion_wilson95": [
+          0.04807254000256516,
+          0.1622621285271631
+        ],
+        "eventual_sample_bounds": [
+          0.09,
+          0.84
+        ],
+        "mean_fruits": 5.39,
+        "median_fruits": 0.0,
+        "std_fruits": 8.950860293848853,
+        "zero_fruit_fraction": 0.59,
+        "mean_reward": 10.448500000000049,
+        "actions": 378150,
+        "mean_actions": 3781.5,
+        "mean_completion_actions": 138.88888888888889,
+        "median_completion_actions": 143.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 295255,
+          "4": 65120,
+          "5": 271,
+          "6": 15115,
+          "7": 202,
+          "8": 138,
+          "9": 139,
+          "10": 141,
+          "11": 159,
+          "12": 143,
+          "13": 144,
+          "14": 199,
+          "15": 148,
+          "16": 173,
+          "17": 148,
+          "18": 120,
+          "19": 125,
+          "20": 84,
+          "21": 155,
+          "22": 108,
+          "23": 95,
+          "24": 59,
+          "25": 9
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 2944000,
+      "lineage_updates": 183744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 21,
+          "wall_death": 0,
+          "body_death": 17,
+          "total_limit": 62,
+          "fruit_free_limit": 0
+        },
+        "wins": 21,
+        "completion_rate": 0.21,
+        "completion_wilson95": [
+          0.141656540619153,
+          0.29979968834089865
+        ],
+        "eventual_sample_bounds": [
+          0.21,
+          0.83
+        ],
+        "mean_fruits": 7.17,
+        "median_fruits": 2.0,
+        "std_fruits": 9.3327970084,
+        "zero_fruit_fraction": 0.41,
+        "mean_reward": 24.86001000000003,
+        "actions": 313999,
+        "mean_actions": 3139.99,
+        "mean_completion_actions": 126.95238095238095,
+        "median_completion_actions": 120.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 205365,
+          "4": 30343,
+          "5": 35220,
+          "6": 10245,
+          "7": 10183,
+          "8": 10174,
+          "9": 157,
+          "10": 223,
+          "11": 10099,
+          "12": 194,
+          "13": 175,
+          "14": 208,
+          "15": 201,
+          "16": 202,
+          "17": 190,
+          "18": 133,
+          "19": 184,
+          "20": 169,
+          "21": 113,
+          "22": 106,
+          "23": 87,
+          "24": 107,
+          "25": 21
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 3072000,
+      "lineage_updates": 191744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 37,
+          "wall_death": 0,
+          "body_death": 26,
+          "total_limit": 37,
+          "fruit_free_limit": 0
+        },
+        "wins": 37,
+        "completion_rate": 0.37,
+        "completion_wilson95": [
+          0.28182360534324524,
+          0.4677947041905709
+        ],
+        "eventual_sample_bounds": [
+          0.37,
+          0.74
+        ],
+        "mean_fruits": 13.04,
+        "median_fruits": 20.0,
+        "std_fruits": 10.20580227125727,
+        "zero_fruit_fraction": 0.29,
+        "mean_reward": 47.85376000000002,
+        "actions": 192624,
+        "mean_actions": 1926.24,
+        "mean_completion_actions": 125.32432432432432,
+        "median_completion_actions": 124.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 145420,
+          "4": 30355,
+          "5": 5316,
+          "6": 5384,
+          "7": 428,
+          "8": 443,
+          "9": 363,
+          "10": 437,
+          "11": 379,
+          "12": 419,
+          "13": 277,
+          "14": 347,
+          "15": 338,
+          "16": 275,
+          "17": 375,
+          "18": 313,
+          "19": 276,
+          "20": 315,
+          "21": 353,
+          "22": 322,
+          "23": 364,
+          "24": 188,
+          "25": 37
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 3200000,
+      "lineage_updates": 199744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 18,
+          "wall_death": 0,
+          "body_death": 35,
+          "total_limit": 47,
+          "fruit_free_limit": 0
+        },
+        "wins": 18,
+        "completion_rate": 0.18,
+        "completion_wilson95": [
+          0.1170022549894635,
+          0.2666735838630073
+        ],
+        "eventual_sample_bounds": [
+          0.18,
+          0.65
+        ],
+        "mean_fruits": 8.53,
+        "median_fruits": 2.0,
+        "std_fruits": 9.806584522656193,
+        "zero_fruit_fraction": 0.39,
+        "mean_reward": 23.782750000000025,
+        "actions": 239725,
+        "mean_actions": 2397.25,
+        "mean_completion_actions": 115.94444444444444,
+        "median_completion_actions": 114.5,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 195340,
+          "4": 35256,
+          "5": 333,
+          "6": 5232,
+          "7": 301,
+          "8": 219,
+          "9": 257,
+          "10": 268,
+          "11": 286,
+          "12": 217,
+          "13": 241,
+          "14": 168,
+          "15": 204,
+          "16": 194,
+          "17": 172,
+          "18": 180,
+          "19": 136,
+          "20": 243,
+          "21": 149,
+          "22": 175,
+          "23": 174,
+          "24": 62,
+          "25": 18
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 3328000,
+      "lineage_updates": 207744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 35,
+          "wall_death": 0,
+          "body_death": 50,
+          "total_limit": 15,
+          "fruit_free_limit": 0
+        },
+        "wins": 35,
+        "completion_rate": 0.35,
+        "completion_wilson95": [
+          0.26364248243097527,
+          0.44745556703112027
+        ],
+        "eventual_sample_bounds": [
+          0.35,
+          0.5
+        ],
+        "mean_fruits": 14.95,
+        "median_fruits": 20.0,
+        "std_fruits": 8.624818838677134,
+        "zero_fruit_fraction": 0.11,
+        "mean_reward": 48.61524,
+        "actions": 83476,
+        "mean_actions": 834.76,
+        "mean_completion_actions": 124.2,
+        "median_completion_actions": 120.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 55480,
+          "4": 20454,
+          "5": 453,
+          "6": 482,
+          "7": 450,
+          "8": 434,
+          "9": 537,
+          "10": 452,
+          "11": 436,
+          "12": 386,
+          "13": 410,
+          "14": 349,
+          "15": 348,
+          "16": 388,
+          "17": 337,
+          "18": 334,
+          "19": 335,
+          "20": 431,
+          "21": 352,
+          "22": 238,
+          "23": 286,
+          "24": 169,
+          "25": 35
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 3456000,
+      "lineage_updates": 215744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 43,
+          "wall_death": 0,
+          "body_death": 50,
+          "total_limit": 7,
+          "fruit_free_limit": 0
+        },
+        "wins": 43,
+        "completion_rate": 0.43,
+        "completion_wilson95": [
+          0.33733298524110106,
+          0.5278461045078768
+        ],
+        "eventual_sample_bounds": [
+          0.43,
+          0.5
+        ],
+        "mean_fruits": 14.39,
+        "median_fruits": 20.0,
+        "std_fruits": 8.435514210763918,
+        "zero_fruit_fraction": 0.05,
+        "mean_reward": 56.459860000000006,
+        "actions": 43014,
+        "mean_actions": 430.14,
+        "mean_completion_actions": 122.20930232558139,
+        "median_completion_actions": 120.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 25495,
+          "4": 10490,
+          "5": 478,
+          "6": 462,
+          "7": 448,
+          "8": 459,
+          "9": 472,
+          "10": 406,
+          "11": 421,
+          "12": 350,
+          "13": 332,
+          "14": 329,
+          "15": 346,
+          "16": 325,
+          "17": 328,
+          "18": 265,
+          "19": 247,
+          "20": 338,
+          "21": 297,
+          "22": 197,
+          "23": 309,
+          "24": 277,
+          "25": 43
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 3584000,
+      "lineage_updates": 223744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 25,
+          "wall_death": 0,
+          "body_death": 72,
+          "total_limit": 3,
+          "fruit_free_limit": 0
+        },
+        "wins": 25,
+        "completion_rate": 0.25,
+        "completion_wilson95": [
+          0.17545211362287672,
+          0.34304463548061603
+        ],
+        "eventual_sample_bounds": [
+          0.25,
+          0.28
+        ],
+        "mean_fruits": 14.37,
+        "median_fruits": 19.0,
+        "std_fruits": 7.741647111564824,
+        "zero_fruit_fraction": 0.03,
+        "mean_reward": 38.421839999999996,
+        "actions": 22816,
+        "mean_actions": 228.16,
+        "mean_completion_actions": 116.36,
+        "median_completion_actions": 113.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 15461,
+          "4": 445,
+          "5": 446,
+          "6": 542,
+          "7": 434,
+          "8": 463,
+          "9": 459,
+          "10": 414,
+          "11": 398,
+          "12": 408,
+          "13": 316,
+          "14": 370,
+          "15": 382,
+          "16": 286,
+          "17": 283,
+          "18": 265,
+          "19": 269,
+          "20": 276,
+          "21": 321,
+          "22": 280,
+          "23": 223,
+          "24": 150,
+          "25": 25
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 3712000,
+      "lineage_updates": 231744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 39,
+          "wall_death": 0,
+          "body_death": 58,
+          "total_limit": 3,
+          "fruit_free_limit": 0
+        },
+        "wins": 39,
+        "completion_rate": 0.39,
+        "completion_wilson95": [
+          0.3001687400639441,
+          0.4879698295415926
+        ],
+        "eventual_sample_bounds": [
+          0.39,
+          0.42
+        ],
+        "mean_fruits": 15.07,
+        "median_fruits": 20.0,
+        "std_fruits": 7.750167740120211,
+        "zero_fruit_fraction": 0.02,
+        "mean_reward": 53.25796999999999,
+        "actions": 23203,
+        "mean_actions": 232.03,
+        "mean_completion_actions": 122.46153846153847,
+        "median_completion_actions": 119.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 10475,
+          "4": 5466,
+          "5": 476,
+          "6": 482,
+          "7": 441,
+          "8": 400,
+          "9": 450,
+          "10": 480,
+          "11": 392,
+          "12": 432,
+          "13": 392,
+          "14": 392,
+          "15": 295,
+          "16": 380,
+          "17": 331,
+          "18": 271,
+          "19": 305,
+          "20": 360,
+          "21": 267,
+          "22": 317,
+          "23": 252,
+          "24": 208,
+          "25": 39
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 3840000,
+      "lineage_updates": 239744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 52,
+          "wall_death": 0,
+          "body_death": 48,
+          "total_limit": 0,
+          "fruit_free_limit": 0
+        },
+        "wins": 52,
+        "completion_rate": 0.52,
+        "completion_wilson95": [
+          0.4231657776522397,
+          0.615354482419481
+        ],
+        "eventual_sample_bounds": [
+          0.52,
+          0.52
+        ],
+        "mean_fruits": 16.16,
+        "median_fruits": 22.0,
+        "std_fruits": 7.549463557101259,
+        "zero_fruit_fraction": 0.0,
+        "mean_reward": 67.58980999999999,
+        "actions": 9019,
+        "mean_actions": 90.19,
+        "mean_completion_actions": 124.3076923076923,
+        "median_completion_actions": 124.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 484,
+          "4": 477,
+          "5": 469,
+          "6": 494,
+          "7": 441,
+          "8": 454,
+          "9": 410,
+          "10": 459,
+          "11": 475,
+          "12": 425,
+          "13": 353,
+          "14": 417,
+          "15": 396,
+          "16": 382,
+          "17": 355,
+          "18": 289,
+          "19": 311,
+          "20": 427,
+          "21": 318,
+          "22": 433,
+          "23": 343,
+          "24": 455,
+          "25": 52
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 3968000,
+      "lineage_updates": 247744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 52,
+          "wall_death": 0,
+          "body_death": 48,
+          "total_limit": 0,
+          "fruit_free_limit": 0
+        },
+        "wins": 52,
+        "completion_rate": 0.52,
+        "completion_wilson95": [
+          0.4231657776522397,
+          0.615354482419481
+        ],
+        "eventual_sample_bounds": [
+          0.52,
+          0.52
+        ],
+        "mean_fruits": 16.48,
+        "median_fruits": 22.0,
+        "std_fruits": 7.658302684015564,
+        "zero_fruit_fraction": 0.0,
+        "mean_reward": 67.90845999999998,
+        "actions": 9154,
+        "mean_actions": 91.54,
+        "mean_completion_actions": 123.36538461538461,
+        "median_completion_actions": 121.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 434,
+          "4": 437,
+          "5": 444,
+          "6": 493,
+          "7": 416,
+          "8": 445,
+          "9": 410,
+          "10": 454,
+          "11": 438,
+          "12": 404,
+          "13": 418,
+          "14": 454,
+          "15": 444,
+          "16": 409,
+          "17": 349,
+          "18": 365,
+          "19": 292,
+          "20": 382,
+          "21": 380,
+          "22": 429,
+          "23": 406,
+          "24": 499,
+          "25": 52
+        }
+      },
+      "holdout": null
+    },
+    {
+      "counter": 4096000,
+      "lineage_updates": 255744,
+      "summary": {
+        "games": 100,
+        "outcomes": {
+          "win": 55,
+          "wall_death": 0,
+          "body_death": 36,
+          "total_limit": 9,
+          "fruit_free_limit": 0
+        },
+        "wins": 55,
+        "completion_rate": 0.55,
+        "completion_wilson95": [
+          0.45244602997442135,
+          0.6438546202048803
+        ],
+        "eventual_sample_bounds": [
+          0.55,
+          0.64
+        ],
+        "mean_fruits": 16.99,
+        "median_fruits": 22.0,
+        "std_fruits": 7.37223846602916,
+        "zero_fruit_fraction": 0.01,
+        "mean_reward": 71.08873999999993,
+        "actions": 54126,
+        "mean_actions": 541.26,
+        "mean_completion_actions": 132.2,
+        "median_completion_actions": 130.0,
+        "winning_games_interrupted_by_training_limits": 0,
+        "length_counts": {
+          "3": 5468,
+          "4": 450,
+          "5": 457,
+          "6": 472,
+          "7": 455,
+          "8": 420,
+          "9": 406,
+          "10": 549,
+          "11": 476,
+          "12": 420,
+          "13": 439,
+          "14": 492,
+          "15": 403,
+          "16": 446,
+          "17": 454,
+          "18": 420,
+          "19": 397,
+          "20": 628,
+          "21": 39433,
+          "22": 424,
+          "23": 526,
+          "24": 536,
+          "25": 55
+        }
+      },
+      "holdout": null
+    }
+  ],
+  "elapsed_seconds": 3730.1415537996218,
+  "extension": {
+    "protocol": "classic-scratch-extension-1",
+    "base_budget": 2048000,
+    "total_budget": 4096000,
+    "source_hashes": {
+      "phase2_extend.py": "6b0782cfdcf8b0a688e6076a1c2fc57e3e98846c546faf0910e51a391244f6be",
+      "snake/classic_extension.py": "8b82f05ca719f7120ca0673f91d4874d6440b802b3f9d691e321c78e087f17e7"
+    },
+    "parent_folder": "results/phase2/full/scratch",
+    "parent_hashes": {
+      "last.resume.pt": "74017dfcaede5dbcb6cef0cb7b27f842bd5b2d50198d7440752bc8b2d3f058fe",
+      "last.pt": "389faaf0fc87976ef5ba8b9e80df445469b933ca2ef945ba09be055ea77d5392",
+      "best.resume.pt": "9e8a31b7ff925369101d3a62f761aa111ed74d30a9bcf906355536cf962aa414",
+      "best.pt": "b0e1929934164166415c92b1be04e51dcb28449ea5021f696a04d669a33b659f",
+      "run.json": "4ef07a6636e0e91d9e55a5fcdebc3aaf85e1f4bcbc3d23796355408aee4e45be"
+    }
+  },
+  "additional_transitions": 2048000,
+  "additional_updates": 128000
+}

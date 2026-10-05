@@ -1,0 +1,93 @@
+{
+  "regime": "full",
+  "environment": {
+    "board_size": 11,
+    "mask_size": 2,
+    "n_boards": 16,
+    "steps": 1000,
+    "seed": 0,
+    "record_steps": false,
+    "reward_profile": "R0",
+    "split": "validation",
+    "test_stream": 1
+  },
+  "training": {
+    "budget": 4096000,
+    "evaluation_interval": 128000,
+    "replay_capacity": 50000,
+    "batch_size": 64,
+    "warmup": 4096,
+    "update_every": 16,
+    "target_every": 500,
+    "learning_rate": 0.0001,
+    "exploration_budget": 1024000,
+    "exploration_decay_end": null,
+    "lr_drop_at": null,
+    "lr_after_drop": null,
+    "selection_budgets": [
+      1024000,
+      2048000,
+      4096000
+    ],
+    "lr_steps": []
+  },
+  "evaluation": {
+    "board_size": 11,
+    "mask_size": 2,
+    "n_boards": 100,
+    "steps": 1000,
+    "seed": 0,
+    "record_steps": false,
+    "reward_profile": "R0",
+    "split": "validation",
+    "test_stream": 1
+  },
+  "gamma": 1,
+  "hidden_sizes": [
+    128,
+    128
+  ],
+  "optimizer": "Adam",
+  "learning_rate_schedule": {
+    "initial": 0.0001,
+    "steps": [],
+    "drop_after_transitions": null,
+    "after_drop": null,
+    "boundary": "updates at the boundary retain the initial rate"
+  },
+  "epsilon": {
+    "start": 1.0,
+    "end": 0.05,
+    "decay_fraction": 0.3,
+    "reference_budget": 1024000,
+    "decay_end_transitions": 310067.2
+  },
+  "selection": "highest scheduled trained validation return; earlier exact tie",
+  "transitions": 4096000,
+  "updates": 255744,
+  "selected_transitions": 3968000,
+  "selected_return": 72.75299988523126,
+  "selections": {
+    "1024000": {
+      "file": "best_1024000.pt",
+      "transitions": 896000,
+      "validation_return": 46.35799985580147
+    },
+    "2048000": {
+      "file": "best_2048000.pt",
+      "transitions": 1920000,
+      "validation_return": 69.95999985173344
+    },
+    "4096000": {
+      "file": "best.pt",
+      "transitions": 3968000,
+      "validation_return": 72.75299988523126
+    }
+  },
+  "duration_seconds": 2162.9699146000203,
+  "status": "complete",
+  "python": "3.11.9",
+  "numpy": "1.26.4",
+  "torch": "2.13.0+cpu",
+  "device": "cpu"
+}

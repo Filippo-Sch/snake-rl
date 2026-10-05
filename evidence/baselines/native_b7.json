@@ -1,0 +1,108 @@
+{
+  "config": {
+    "board_size": 7,
+    "mask_size": 2,
+    "n_boards": 100,
+    "steps": 1000,
+    "seed": 0,
+    "record_steps": false
+  },
+  "runs": [
+    {
+      "policy": "direct",
+      "regime": "full",
+      "parameters": {},
+      "weights": null,
+      "rewards": {
+        "STEP_REWARD": 0.0,
+        "FRUIT_REWARD": 0.5,
+        "HIT_WALL_REWARD": -0.1,
+        "ATE_HIMSELF_REWARD": -0.2,
+        "WIN_REWARD": 1.0
+      },
+      "initial_boards_sha256": "335be456edf458ddedd2f171309e329de95bf6958f8eaa3fb98f0a7ddf415e92",
+      "summary": {
+        "fruits": {
+          "mean": 285.48,
+          "std": 7.897678983937834
+        },
+        "wall_hits": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "body_hits": {
+          "mean": 52.98,
+          "std": 3.8976294271666148
+        },
+        "board_completions": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "return": {
+          "mean": 132.1439998421073,
+          "std": 3.7711108119871497
+        },
+        "cells_removed_per_body_hit": 5.280105700264251
+      },
+      "diagnostics": {
+        "length_mismatch_states": 0
+      },
+      "policy_device": "cpu",
+      "runtime": {
+        "python": "3.11.9",
+        "numpy": "1.26.4",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "environment_device": "cpu",
+        "torch": "2.13.0+cpu"
+      }
+    },
+    {
+      "policy": "direct",
+      "regime": "partial",
+      "parameters": {},
+      "weights": null,
+      "rewards": {
+        "STEP_REWARD": 0.0,
+        "FRUIT_REWARD": 0.5,
+        "HIT_WALL_REWARD": -0.1,
+        "ATE_HIMSELF_REWARD": -0.2,
+        "WIN_REWARD": 1.0
+      },
+      "initial_boards_sha256": "335be456edf458ddedd2f171309e329de95bf6958f8eaa3fb98f0a7ddf415e92",
+      "summary": {
+        "fruits": {
+          "mean": 197.35,
+          "std": 14.24346385631889
+        },
+        "wall_hits": {
+          "mean": 9.21,
+          "std": 4.977312162566898
+        },
+        "body_hits": {
+          "mean": 30.47,
+          "std": 3.652742155220548
+        },
+        "board_completions": {
+          "mean": 0.01,
+          "std": 0.09999999999999999
+        },
+        "return": {
+          "mean": 91.66499989546836,
+          "std": 6.777597898536451
+        },
+        "cells_removed_per_body_hit": 6.213980964883492
+      },
+      "diagnostics": {
+        "length_mismatch_states": 2904
+      },
+      "policy_device": "cpu",
+      "runtime": {
+        "python": "3.11.9",
+        "numpy": "1.26.4",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "environment_device": "cpu",
+        "torch": "2.13.0+cpu"
+      }
+    }
+  ]
+}
