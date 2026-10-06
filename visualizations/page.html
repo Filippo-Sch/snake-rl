@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Watch frozen DQN agents play Snake with full and partial observation. Interactive replays of genuine held-out test episodes.">
+<meta property="og:title" content="Learning to Play Snake — Watch the agents">
+<meta property="og:description" content="Six frozen DQN policies. Different vision. Different behaviour.">
+<meta property="og:image" content="https://filippo-sch.github.io/snake-rl/visualizations/poster.png">
+<meta name="theme-color" content="#08151e">
+<title>Learning to Play Snake · Interactive replay</title>
+<style>
+:root {
+  color-scheme:dark;
+  --bg:#08151e;
+  --panel:#10232f;
+  --edge:#25404f;
+  --text:#eaf4f7;
+  --muted:#a6bac6;
+  --full:#67e8c0;
+  --partial:#bca6ff;
+  --fruit:#ff8074
+}
+* {
+  box-sizing:border-box
+}
+body {
+  margin:0;
+  background:radial-gradient(ellipse at 15% 0%,#163442,transparent 55%),var(--bg);
+  color:var(--text);
+  font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif
+}
+main {
+  max-width:1120px;
+  margin:auto;
+  padding:42px 24px 26px
+}
+a {
+  color:var(--full);
+  text-underline-offset:4px
+}
+button,input,select {
+  font:inherit
+}
+button,select {
+  border:1px solid var(--edge);
+  border-radius:10px;
+  background:#163140;
+  color:var(--text);
+  padding:10px 17px;
+  cursor:pointer
+}
+button:hover,select:hover {
+  border-color:var(--full)
+}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible {
+  outline:3px solid var(--partial);
+  outline-offset:4px
+}
+button:disabled {
+  opacity:.45;
+  cursor:default
+}
+.eyebrow {
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.17em;
+  color:var(--full)
+}
+h1 {
+  font-size:clamp(38px,6vw,66px);
+  letter-spacing:-.055em;
+  line-height:1.08;
+  margin:14px 0 18px
+}
+h1 span {
+  color:var(--muted)
+}
+.intro {
+  max-width:740px;
+  color:var(--muted);
+  font-size:18px
+}
+.toplinks {
+  display:flex;
+  gap:23px;
+  flex-wrap:wrap;
+  margin:24px 0 28px
+}
+.tabs {
+  display:flex;
+  gap:9px;
+  flex-wrap:wrap
+}
+.tabs button[aria-selected=true] {
+  background:var(--full);
+  color:#06251c;
+  border-color:var(--full);
+  font-weight:700
+}
+.description {
+  color:var(--muted);
+  margin:15px 0 24px
+}
+.cards {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px
+}
+.card {
+  background:linear-gradient(150deg,#142c39,#0d202b);
+  border:1px solid var(--edge);
+  border-radius:22px;
+  padding:24px;
+  min-width:0;
+  box-shadow:0 18px 50px #0003
+}
+.card.full {
+  border-top:3px solid var(--full)
+}
+.card.partial {
+  border-top:3px solid var(--partial)
+}
+.cardhead {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px
+}
+.card h2 {
+  font-size:20px;
+  letter-spacing:-.025em;
+  margin:0
+}
+.status {
+  font-size:11px;
+  letter-spacing:.06em;
+  font-weight:700;
+  color:var(--muted);
+  padding:4px 8px;
+  border:1px solid var(--edge);
+  border-radius:7px;
+  white-space:nowrap
+}
+.status.win {
+  color:var(--full);
+  border-color:var(--full)
+}
+.status.cycle {
+  color:var(--partial);
+  border-color:var(--partial)
+}
+.decision {
+  font-size:13px;
+  color:var(--muted);
+  margin:8px 0 18px
+}
+.board {
+  width:100%;
+  aspect-ratio:1;
+  display:block;
+  border-radius:14px;
+  background:#08151e
+}
+.metrics {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin:20px 0
+}
+.metric small {
+  display:block;
+  font-size:10px;
+  letter-spacing:.11em;
+  color:var(--muted)
+}
+.metric strong {
+  font-size:28px;
+  letter-spacing:-.045em;
+  line-height:1.4
+}
+.inputrow {
+  display:flex;
+  align-items:center;
+  gap:18px;
+  border-top:1px solid var(--edge);
+  padding-top:18px
+}
+.inputcanvas {
+  width:96px;
+  height:96px;
+  border-radius:9px;
+  flex:none
+}
+.inputrow p {
+  font-size:12px;
+  color:var(--muted);
+  margin:0
+}
+.inputrow b {
+  font-size:12px;
+  color:var(--text)
+}
+.controls {
+  margin-top:24px;
+  background:#0f2531;
+  border:1px solid var(--edge);
+  border-radius:18px;
+  padding:20px
+}
+.controlrow {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap
+}
+.primary {
+  background:var(--full);
+  color:#07271d;
+  font-weight:700;
+  min-width:90px
+}
+.speed {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:13px
+}
+.speed select {
+  padding:8px 12px
+}
+.toggle {
+  display:flex;
+  align-items:center;
+  gap:7px;
+  font-size:13px;
+  color:var(--muted);
+  margin-left:auto
+}
+.toggle input {
+  accent-color:var(--partial);
+  width:17px;
+  height:17px
+}
+.timeline {
+  width:100%;
+  margin:20px 0 9px;
+  accent-color:var(--full);
+  cursor:pointer
+}
+.timebar {
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  color:var(--muted);
+  font-size:12px;
+  font-variant-numeric:tabular-nums
+}
+.insight {
+  margin:24px 0;
+  padding:24px 26px;
+  border-radius:18px;
+  border-left:3px solid var(--partial);
+  background:#10232f
+}
+.insight h3 {
+  font-size:21px;
+  margin:0 0 7px;
+  letter-spacing:-.025em
+}
+.insight p {
+  margin:0;
+  color:var(--muted);
+  font-size:14px
+}
+details {
+  border-top:1px solid var(--edge);
+  padding-top:20px;
+  color:var(--muted);
+  font-size:14px
+}
+summary {
+  cursor:pointer;
+  color:var(--text)
+}
+details li {
+  margin:8px 0
+}
+.hashes {
+  font-size:11px;
+  word-break:break-all
+}
+footer {
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-top:30px;
+  color:var(--muted);
+  font-size:12px
+}
+code {
+  font-family:ui-monospace,monospace
+}
+noscript {
+  display:block;
+  padding:20px;
+  color:var(--fruit)
+}
+@media(max-width:720px) {
+  main {
+    padding:26px 18px;
+    display:flex;
+    flex-direction:column
+  }
+  header {
+    order:0
+  }
+  .tabs {
+    order:1
+  }
+  .description {
+    order:2
+  }
+  .controls {
+    order:3;
+    margin-top:0;
+    margin-bottom:20px
+  }
+  .cards {
+    order:4;
+    grid-template-columns:1fr
+  }
+  .insight {
+    order:5
+  }
+  details {
+    order:6
+  }
+  footer {
+    order:7
+  }
+  .card {
+    padding:20px
+  }
+  .toggle {
+    margin-left:0
+  }
+  .controlrow {
+    gap:10px
+  }
+  .toplinks {
+    gap:18px
+  }
+  .intro {
+    font-size:16px
+  }
+  h1 {
+    font-size:42px
+  }
+  .insight {
+    padding:20px
+  }
+  .speed {
+    flex-basis:100%
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  * {
+    scroll-behavior:auto
+  }
+}
+</style>
+</head>
+<body><main>
+<header><div class="eyebrow">SNAKE × DEEP Q-LEARNING</div><h1>Same algorithm.<br><span>Different vision.</span></h1>
+<p class="intro">Watch what a learned policy actually does. Compare full and partial observation, step through its decisions, and see where it succeeds — and where it gets stuck.</p>
+<nav class="toplinks"><a href="https://github.com/Filippo-Sch/snake-rl">Code &amp; reproduction</a><a href="../report/snake_rl_report.pdf">Read the report</a><a href="https://github.com/Filippo-Sch/snake-rl/releases/tag/v1.1.0">Download the video</a></nav></header>
+<div class="tabs" role="tablist" aria-label="Environment"><button role="tab" data-case="b7" aria-selected="true">Native · 7 × 7</button><button role="tab" data-case="b11" aria-selected="false">Native · 11 × 11</button><button role="tab" data-case="classic" aria-selected="false">Classic Snake</button></div>
+<p id="description" class="description"></p>
+<section class="cards" aria-label="Policy comparison">
+<article class="card full" data-view="full"><div class="cardhead"><h2>Full observation</h2><span class="status">PLAYING</span></div><p class="decision"></p><canvas class="board" aria-label="Full observation agent's actual board"></canvas><div class="metrics"></div><div class="inputrow"><canvas class="inputcanvas" aria-label="Actual observation passed to the full observation policy"></canvas><p><b>What the policy sees</b><br><span class="inputlabel"></span></p></div></article>
+<article class="card partial" data-view="partial"><div class="cardhead"><h2>Partial observation</h2><span class="status">PLAYING</span></div><p class="decision"></p><canvas class="board" aria-label="Partial observation agent's actual board with its visible window highlighted"></canvas><div class="metrics"></div><div class="inputrow"><canvas class="inputcanvas" aria-label="Actual five by five observation passed to the partial observation policy"></canvas><p><b>What the policy sees</b><br>Only a 5 × 5 window around its head.<br>The dim background is for the spectator.</p></div></article>
+</section>
+<section class="controls" aria-label="Playback controls"><div class="controlrow"><button id="play" class="primary">Pause</button><button id="reset">Restart</button><button id="fruit">Next fruit</button><label class="speed">Speed <select id="speed"><option value="8">8 actions / s</option><option value="16" selected>16 actions / s</option><option value="32">32 actions / s</option><option value="64">64 actions / s</option></select></label><label class="toggle"><input type="checkbox" id="fog" checked>Highlight agent vision</label></div><input id="timeline" class="timeline" type="range" min="0" max="1000" step="1" value="0" aria-label="Episode action"><div class="timebar"><span id="time"></span><span>Episode #0 · root seed 0 · frozen DQN</span></div></section>
+<section class="insight"><h3 id="insight-title"></h3><p id="insight"></p></section>
+<details><summary>How these replays were made</summary><ul><li>Each panel replays held-out test episode <b>0</b>. Episodes were not selected by outcome. Native trajectories use the original 500-board batch and test stream 3; Classic uses its independent game-0 test stream.</li><li>Actions come from the six final checkpoints, using the original inference adapters and environments. No training, guidance, altered collision rules, or scripted paths are used.</li><li>The small inset is the exact observation passed to the policy. The highlighted region on a partial board is visible to the agent; the rest is shown only to the spectator.</li><li>Playback speed changes only presentation. Full Classic freezes after its episode ends while the partial policy continues. A repeated physical state is marked as a deterministic cycle.</li><li>These are illustrative trajectories. The report's aggregate scores use 500 episodes per policy and configuration and one training seed. All 2,000 native DQN records plus both displayed Classic records were compared with the original evidence.</li></ul><p class="hashes" id="hashes"></p></details>
+<footer><span>Filippo Schiabel · University of Padua · 2025/2026</span><span>Visual supplement to the completed course project</span></footer>
+<noscript>Enable JavaScript to play the recorded simulations.</noscript>
+</main>
+<script id="replay-data" type="application/json">__REPLAY_DATA__</script>
+<script>
+"use strict";
+const data=JSON.parse(document.getElementById("replay-data").textContent);
+const episodes=Object.fromEntries(data.episodes.map(e=>[e.id,e]));
+const $=id=>document.getElementById(id);
+const cards=[...document.querySelectorAll(".card")];
+const metadata= {
+  b7: {
+    description:"Original task: 7 × 7 board, nonfatal collisions, 1,000-action horizon.",title:"Seeing less means searching first.",insight:"On the 500-board partial test, DQN's mean return is 122.13 versus 92.81 for the Direct heuristic. The replay above is one actual episode, not an average."
+  }
+  ,b11: {
+    description:"Original task: 11 × 11 board, nonfatal collisions, 1,000-action horizon.",title:"Exploration changes the outcome.",insight:"On the larger partial board, DQN's mean test return is 32.88 versus 16.92 for Direct. With full observation, Direct remains stronger: 75.63 versus DQN's 71.95."
+  }
+  ,classic: {
+    description:"Classic task: 5 × 5 playable interior, fatal collisions, 5,000-action test limit.",title:"Full vision completes the board. Partial vision cycles.",insight:"This full-observation game wins in 104 actions. The partial game enters a cycle at action 79 and times out at 5,000. Across 500 test games: 283 full-observation wins versus 4 partial-observation wins."
+  }
+}
+;
+let selected="b7",tick=0,playing=!matchMedia("(prefers-reduced-motion: reduce)").matches,last=0;
+const pair=()=>[episodes[selected+"_full"],episodes[selected+"_partial"]];
+const directions=["↑ up","→ right","↓ down","← left"];
+const palette=["#23404e","#153340","#ff8074","#4ecb9c","#b8ffe5"];
+function grid(canvas,board,size,head=null,fog=false,accent="#67e8c0") {
+  const ratio=window.devicePixelRatio||1,width=Math.max(96,Math.round(canvas.getBoundingClientRect().width));
+  if(canvas.width!==width*ratio) {
+    canvas.width=width*ratio;
+    canvas.height=width*ratio
+  }
+  const ctx=canvas.getContext("2d");
+  ctx.setTransform(ratio,0,0,ratio,0,0);
+  ctx.clearRect(0,0,width,width);
+  const pad=8,unit=(width-2*pad)/size,gap=Math.max(1,unit*.045);
+  for(let row=0;row<size;row++)for(let col=0;col<size;col++) {
+    const value=Number(board[row*size+col]),x=pad+col*unit,y=pad+(size-1-row)*unit;
+    const hidden=fog&&head&&(Math.abs(row-head[0])>2||Math.abs(col-head[1])>2);
+    ctx.globalAlpha=hidden?.20:1;
+    ctx.fillStyle=palette[value];
+    ctx.beginPath();
+    ctx.roundRect(x+gap,y+gap,unit-2*gap,unit-2*gap,Math.max(2,unit*.16));
+    ctx.fill();
+    if(value===2) {
+      ctx.fillStyle="#ffe0c1";
+      ctx.beginPath();
+      ctx.ellipse(x+unit*.5,y+unit*.5,unit*.23,unit*.25,0,0,Math.PI*2);
+      ctx.fill();
+      ctx.fillStyle="#365d3d";
+      ctx.fillRect(x+unit*.48,y+unit*.20,unit*.08,unit*.16)
+    }
+    if(value===4) {
+      ctx.fillStyle="#124637";
+      ctx.beginPath();
+      ctx.arc(x+unit*.39,y+unit*.37,unit*.065,0,7);
+      ctx.arc(x+unit*.65,y+unit*.37,unit*.065,0,7);
+      ctx.fill()
+    }
+  }
+  ctx.globalAlpha=1;
+  if(fog&&head) {
+    const loR=Math.max(0,head[0]-2),hiR=Math.min(size-1,head[0]+2),loC=Math.max(0,head[1]-2),hiC=Math.min(size-1,head[1]+2);
+    ctx.strokeStyle=accent;
+    ctx.lineWidth=2;
+    ctx.strokeRect(pad+loC*unit+1,pad+(size-1-hiR)*unit+1,(hiC-loC+1)*unit-2,(hiR-loR+1)*unit-2)
+  }
+}
+function draw() {
+  const [full,partial]=pair(),step=Math.floor(tick);
+  cards.forEach((card,i)=> {
+    const episode=i?partial:full,frame=episode.frames[Math.min(step,episode.frames.length-1)];   grid(card.querySelector(".board"),frame.board,episode.size,frame.head,i===1&&$("fog").checked,i?"#bca6ff":"#67e8c0");   grid(card.querySelector(".inputcanvas"),frame.view,episode.observation_side);   const status=card.querySelector(".status"),win=frame.outcome==="win",cycle=frame.cycle;   status.textContent=win?"BOARD COMPLETE":frame.outcome==="total_limit"?(cycle?"TIMEOUT / CYCLE":"TIMEOUT"):cycle?"STATE CYCLE":frame.outcome==="horizon"?"HORIZON":frame.outcome==="active"?"PLAYING":"GAME ENDED";   status.className="status"+(win?" win":cycle?" cycle":"");   card.querySelector(".decision").textContent=`Action ${frame.t.toLocaleString()} · ${frame.action===null?"Episode ended":"DQN chooses "+directions[frame.action]}`;   card.querySelector(".inputlabel")?.replaceChildren(document.createTextNode(`${episode.observation_side} × ${episode.observation_side}: the entire board.`));   const stats=episode.task==="native"?[["FRUIT",frame.fruits],["WALL HITS",frame.walls],["BODY CUTS",frame.hits]]:[["FRUIT",frame.fruits+" / 22"],["LENGTH",frame.length+" / 25"],["RETURN",frame.score.toFixed(2)]];   card.querySelector(".metrics").innerHTML=stats.map(([name,value])=>`<div class="metric"><small>${name}</small><strong>${value}</strong></div>`).join("");
+  }
+  );
+  $("timeline").value=step;
+  $("time").textContent=`Action ${step.toLocaleString()} / ${partial.horizon.toLocaleString()}`;
+  $("play").textContent=playing?"Pause":"Play";
+  const next=pair().some(e=>e.frames.slice(step+1).some(f=>f.fruits>e.frames[Math.min(step,e.frames.length-1)].fruits));
+  $("fruit").disabled=!next;
+}
+function setCase(value) {
+  selected=value;
+  tick=0;
+  last=0;
+  $("timeline").max=pair()[1].horizon;
+  $("description").textContent=metadata[value].description;
+  $("insight-title").textContent=metadata[value].title;
+  $("insight").textContent=metadata[value].insight;
+  document.querySelectorAll("[data-case]").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.case===value)));
+  draw()
+}
+$("play").onclick=()=> {
+  if(tick>=pair()[1].horizon)tick=0;
+  playing=!playing;
+  last=0;
+  draw()
+}
+;
+$("reset").onclick=()=> {
+  tick=0;
+  last=0;
+  draw()
+}
+;
+$("timeline").oninput=event=> {
+  playing=false;
+  tick=Number(event.target.value);
+  draw()
+}
+;
+$("fog").onchange=draw;
+$("fruit").onclick=()=> {
+  playing=false;
+  const step=Math.floor(tick);
+  const next=pair().map(e=> {
+    const now=e.frames[Math.min(step,e.frames.length-1)].fruits;const index=e.frames.findIndex((f,i)=>i>step&&f.fruits>now);return index<0?Infinity:index
+  }
+  );
+  tick=Math.min(...next);
+  draw()
+}
+;
+document.querySelectorAll("[data-case]").forEach(b=>b.onclick=()=>setCase(b.dataset.case));
+document.addEventListener("keydown",event=> {
+  if(["INPUT","SELECT","BUTTON"].includes(event.target.tagName))return;if(event.code==="Space") {
+    event.preventDefault();$("play").click()
+  }
+  if(event.code==="ArrowRight"||event.code==="ArrowLeft") {
+    event.preventDefault();playing=false;tick=Math.max(0,Math.min(pair()[1].horizon,Math.floor(tick)+(event.code==="ArrowRight"?1:-1)));draw()
+  }
+}
+);
+window.addEventListener("resize",draw);
+document.addEventListener("visibilitychange",()=>last=0);
+$("hashes").textContent="Checkpoint SHA-256: "+Object.entries(data.checkpoints).map(([name,hash])=>name+" "+hash).join(" · ");
+function animate(now) {
+  if(playing&&last) {
+    tick=Math.min(pair()[1].horizon,tick+Math.min(.1,(now-last)/1000)*Number($("speed").value));
+    if(tick>=pair()[1].horizon)playing=false;
+    draw()
+  }
+  last=now;
+  requestAnimationFrame(animate)
+}
+setCase("b7");
+requestAnimationFrame(animate);
+</script></body></html>

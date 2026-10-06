@@ -17,6 +17,24 @@ controlled continuations, and limitations. The repository contains the training
 code, six selected checkpoints, environments, and compact evidence needed to
 reconstruct the results.
 
+## Watch the agents
+
+[![Six frozen DQN policies with full and partial observation](visualizations/poster.png)](https://filippo-sch.github.io/snake-rl/visualizations/)
+
+[Open the interactive replay](https://filippo-sch.github.io/snake-rl/visualizations/)
+or [download the 49-second portrait video](https://github.com/Filippo-Sch/snake-rl/releases/tag/v1.1.0).
+Compare all six configurations, pause, scrub through decisions, change playback
+speed, and inspect the exact observation seen by each agent. Every panel shows
+held-out test episode 0; native replay preserves the original 500-board RNG
+allocation. The illustrated episodes were not selected by outcome.
+
+This is a visual supplement prepared after completion of the course project.
+The final submission remains available in release v1.0.0. To regenerate the page,
+run `python -m visualizations`; add `--video` to export the MP4 using FFmpeg on
+PATH, or `--ffmpeg PATH` to specify its executable. No extra Python packages are
+needed beyond the project requirements. The optional video is written to
+`results/visualizations/snake_rl_linkedin.mp4`.
+
 ## Results
 
 Mean test return in the original task, using 500 episodes per row:
@@ -142,7 +160,8 @@ work. The report uses the supplied ICML 2021 LaTeX template; bundled style files
 retain their original authorship and copyright or license notices. No blanket
 license is declared for these third-party materials.
 
-This repository is based on the final submission. Its source, checkpoints,
-scientific evidence, and report are unchanged; the README and Git configuration
-are adapted for publication. The original submission ZIP and PDF are available
+This repository is based on the final submission. Its original training and
+evaluation source, checkpoints, scientific evidence, and report are unchanged.
+The visualizations module is a later presentation supplement; the README and
+Git configuration are adapted for publication. The original submission ZIP and PDF are available
 in the [v1.0.0 release](https://github.com/Filippo-Sch/snake-rl/releases/tag/v1.0.0).
