@@ -19,21 +19,30 @@ reconstruct the results.
 
 ## Watch the agents
 
-[![Six frozen DQN policies with full and partial observation](visualizations/poster.png)](https://filippo-sch.github.io/snake-rl/visualizations/)
+[![Interactive comparisons of DQN, observation regimes and reference heuristics](visualizations/preview.png)](https://filippo-sch.github.io/snake-rl/)
 
-[Open the interactive replay](https://filippo-sch.github.io/snake-rl/visualizations/)
-or [download the 49-second portrait video](https://github.com/Filippo-Sch/snake-rl/releases/tag/v1.1.0).
-Compare all six configurations, pause, scrub through decisions, change playback
-speed, and inspect the exact observation seen by each agent. Every panel shows
-held-out test episode 0; native replay preserves the original 500-board RNG
-allocation. The illustrated episodes were not selected by outcome.
+[Open the interactive replay](https://filippo-sch.github.io/snake-rl/), or open
+`index.html` locally. This single self-contained HTML file includes the viewer
+and its recorded trajectories; it works without a browser server.
 
-This is a visual supplement prepared after completion of the course project.
-The final submission remains available in release v1.0.0. To regenerate the page,
-run `python -m visualizations`; add `--video` to export the MP4 using FFmpeg on
-PATH, or `--ffmpeg PATH` to specify its executable. No extra Python packages are
-needed beyond the project requirements. The optional video is written to
-`results/visualizations/snake_rl_linkedin.mp4`.
+Compare full and partial DQN or DQN against the strongest reported heuristic:
+Direct in the native task; Classic Greedy for full and BFS for partial, ranked
+by test wins and then mean fruit. Every comparison uses the same initial board.
+The default is episode 0. Classic also offers episode 268, the first of only
+four archived partial-DQN wins in 500 games, explicitly shown as a selected
+success example. On that same start, full DQN dies at step 43 and partial DQN
+wins at step 113.
+
+The body links and marked tail make Classic's collision rules visible. Entering
+the departing tail without growth is legal; entering the remaining body is fatal.
+Use **Tail move** to inspect the full agent's legal entries at moves 95-103 in
+episode 0. The inset shows the actual spatial input, without spectator-only body
+links or tail markers. Aggregate 500-game scores appear beside every example.
+
+The original submission remains unchanged in release v1.0.0. Run
+`python -m visualizations` to regenerate the replay data in the same `index.html`.
+No video export or additional Python dependencies are needed. The preview image
+is used only as the link thumbnail in the README and on social platforms.
 
 ## Results
 
